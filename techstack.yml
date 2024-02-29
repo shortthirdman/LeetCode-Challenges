@@ -1,0 +1,95 @@
+repo_name: shortthirdman/LeetCode-Challenges
+report_id: 0f25e99084e251f18ea4e4f63ffcabd3
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T15:38:11+00:00'
+requested_by: shortthirdman
+provider: github
+branch: main
+detected_tools_count: 7
+tools:
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/.github/workflows/ci.yaml
+  detection_source: ".github/workflows/ci.yaml"
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-02-29 15:29:10.000000000 Z
+- name: Gradle
+  description: A powerful build system for the JVM
+  website_url: https://www.gradle.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
+  detection_source: build.gradle
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-02-29 15:29:10.000000000 Z
+- name: commons-collections:commons-collections
+  description: Types that extend and augment the Java Collections Framework
+  version: 3.2.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
+  detection_source: build.gradle
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-02-29 15:29:10.000000000 Z
+- name: org.apache.commons:commons-lang3
+  description: Apache Commons Lang
+  version: '3.5'
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
+  detection_source: build.gradle
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-02-29 15:29:10.000000000 Z
+- name: org.junit.platform:junit-platform-launcher
+  description: Module "junit-platform-launcher" of JUnit 5
+  version: 1.10.0
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
+  detection_source: build.gradle
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-02-29 15:29:10.000000000 Z
