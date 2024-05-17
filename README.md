@@ -8,9 +8,17 @@ All Java solutions for various challenges presented during interview on [LeetCod
 
 ## Requirements
 
-- Gradle 8.x
-- Java SDK 8
-- JetBrains IntelliJ IDEA / Spring Tool Suite 4
+- Apache Maven 3.9.6
+- Gradle 8.5.0
+- Java 20
+- JetBrains IntelliJ IDEA
+
+
+## Run and Test
+
+`mvn clean install test`
+
+`gradle clean build`
 
 
 ## Tech Stack
@@ -40,6 +48,8 @@ Please make sure to update tests as appropriate.
 - [Running GitHub Actions Locally: A Complete Guide for Windows, Mac, and Linux Users](https://medium.com/debasishkumardas5/running-github-actions-locally-a-complete-guide-for-windows-mac-and-linux-users-34c45999c7cd)
 
 - [How to test GitHub Actions locally?](https://www.browserstack.com/guide/test-github-actions-locally)
+
+- [Getting "Skipping JaCoCo execution due to missing execution data file" upon executing JaCoCo](https://stackoverflow.com/questions/18107375/getting-skipping-jacoco-execution-due-to-missing-execution-data-file-upon-exec)
 
 ## License
 
