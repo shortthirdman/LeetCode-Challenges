@@ -27,6 +27,7 @@ jobs:
     - name: Run build with Gradle Wrapper
       run: |
         cd gradle
+        chmod +x ./gradlew
         ./gradlew build
     
     - name: Upload Report
