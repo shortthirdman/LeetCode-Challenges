@@ -1,8 +1,7 @@
 package com.shortthirdman.leetcode.quickstart;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
@@ -13,15 +12,18 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class EmployeeFactoryTest {
 
-	List<Employee> employees = new ArrayList<>();
+	List<Employee> employees = null;
 
 	@BeforeEach
-	public void init_employeeList() {
+	public void setUp() {
+		employees = new ArrayList<>();
 		employees.add(new Employee(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0));
 		employees.add(new Employee(122, "Paul Niksui", 25, "Male", "Sales And Marketing", 2015, 13500.0));
 		employees.add(new Employee(133, "Martin Theron", 29, "Male", "Infrastructure", 2012, 18000.0));
@@ -49,8 +51,8 @@ public class EmployeeFactoryTest {
 			).collect(Collectors.toMap(SimpleEntry::getKey, SimpleEntry::getValue));
 		
 		Map<String, Long> actualCount = EmployeeFactory.getMaleFemaleCount(employees);
-		
-		assertTrue(actualCount.equals(expectedCount));
+
+        assertEquals(actualCount, expectedCount);
 	}
 
 	@Test
@@ -100,11 +102,17 @@ public class EmployeeFactoryTest {
 		
 		Map<String, Long> actualCounts = EmployeeFactory.countByDepartment(employees).stream()
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-		
-		assertTrue(expectedCounts.equals(actualCounts));
+
+		assertEquals(expectedCounts, actualCounts);
+		assertAll("Maps are equal",
+				() -> assertEquals(expectedCounts.size(), actualCounts.size(), "Map sizes are not equal"),
+				() -> expectedCounts.forEach((key, value) ->
+						assertTrue(actualCounts.containsKey(key) && actualCounts.get(key).equals(value),
+								"Map values are not equal for key: " + key)));
 	}
 
 	@Test
+	@DisplayName(value = "Calculate average salary")
 	public void test_calculateAvgSalary() {
 		Map<String, Double> expectedAverages = Stream.of(
 				new SimpleEntry<>("Product Development", 31960.0),
@@ -115,13 +123,20 @@ public class EmployeeFactoryTest {
 				new SimpleEntry<>("Account And Finance", 24150.0)
 		).collect(Collectors.toMap(SimpleEntry::getKey, SimpleEntry::getValue));
 		
-		Map<String, Double> actualAverages = EmployeeFactory.averageSalaryByDept(employees).stream()
+		Map<String, Double> actualAverages = EmployeeFactory.averageSalaryByDept(employees)
+				.stream()
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-		
-		assertTrue(expectedAverages.equals(actualAverages));
+
+        assertEquals(expectedAverages, actualAverages);
+		assertAll("Maps are equal",
+				() -> assertEquals(expectedAverages.size(), actualAverages.size(), "Map sizes are not equal"),
+				() -> expectedAverages.forEach((key, value) ->
+						assertTrue(actualAverages.containsKey(key) && actualAverages.get(key).equals(value),
+								"Map values are not equal for key: " + key)));
 	}
 
 	@Test
+	@DisplayName(value = "Get oldest employee")
 	public void test_getOldestEmployee() {
 		Employee expectedEmployee = Employee.builder()
 				.id(166)
@@ -134,10 +149,10 @@ public class EmployeeFactoryTest {
 				.build();
 		Employee actualEmployee = EmployeeFactory.oldestEmployee(employees);
 		assertThat(actualEmployee).usingRecursiveComparison().isEqualTo(expectedEmployee);
-//		Assert.assertTrue(EqualsBuilder.reflectionEquals(expectedEmployee, actualEmployee));
 	}
 
 	@Test
+	@DisplayName(value = "Get employee salary")
 	public void test_getEmployeesSalary() {
 		DoubleSummaryStatistics actualStats = EmployeeFactory.getEmployeeSalary(employees);
 		assertEquals(21141.235294117647, actualStats.getAverage(), 0);

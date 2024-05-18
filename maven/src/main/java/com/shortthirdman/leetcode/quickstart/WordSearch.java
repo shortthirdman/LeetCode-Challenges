@@ -9,12 +9,12 @@ public class WordSearch {
 
     Set<String> result = new HashSet<>();
 
-    static class TrieNode {
+    private static class TrieNode {
         public TrieNode[] children = new TrieNode[26];
         public String item = "";
     }
 
-    static class Trie {
+    private static class Trie {
         public TrieNode root = new TrieNode();
 
         public void insert(String word) {
@@ -71,7 +71,7 @@ public class WordSearch {
         return new ArrayList<>(result);
     }
 
-    public void dfs(char[][] board, boolean[][] visited, String str, int i, int j, Trie trie){
+    private void dfs(char[][] board, boolean[][] visited, String str, int i, int j, Trie trie){
         int m = board.length;
         int n = board[0].length;
 

@@ -1,9 +1,8 @@
 package com.shortthirdman.leetcode.quickstart;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.*;
 
 /**
  * Given a string s and a dictionary of words dict, add spaces in s to construct a sentence where each word is a valid dictionary word.
@@ -14,6 +13,14 @@ public class WordBreak {
 
     @SuppressWarnings({"rawtypes", "unchecked"})
     public List<String> wordBreak(String s, Set<String> dict) {
+        if (Objects.isNull(s)) {
+            throw new NullPointerException("Input string can not be null");
+        }
+
+        if (StringUtils.isBlank(s)) {
+            return List.of();
+        }
+
         ArrayList[] dp = new ArrayList[s.length() + 1];
         dp[0] = new ArrayList<>();
 
@@ -47,7 +54,7 @@ public class WordBreak {
         return result;
     }
 
-    public void dfs(List<String>[] dp, int end, List<String> result, ArrayList<String> tmp) {
+    private void dfs(List<String>[] dp, int end, List<String> result, ArrayList<String> tmp) {
         if (end <= 0) {
             StringBuilder path = new StringBuilder(tmp.get(tmp.size() - 1));
             for (int i = tmp.size() - 2; i >= 0; i--) {

@@ -2,11 +2,11 @@ repo_name: shortthirdman/LeetCode-Challenges
 report_id: 0f25e99084e251f18ea4e4f63ffcabd3
 version: 0.1
 repo_type: Public
-timestamp: '2024-02-29T15:38:11+00:00'
+timestamp: '2024-05-17T18:18:35+00:00'
 requested_by: shortthirdman
 provider: github
 branch: main
-detected_tools_count: 7
+detected_tools_count: 17
 tools:
 - name: Java
   description: A concurrent, class-based, object-oriented, language specifically designed
@@ -50,10 +50,36 @@ tools:
   category: Build, Test, Deploy
   sub_category: Java Build Tools
   image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
-  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
-  detection_source: build.gradle
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/gradle/build.gradle
+  detection_source: gradle/build.gradle
   last_updated_by: Swetank Mohanty
   last_updated_on: 2024-02-29 15:29:10.000000000 Z
+- name: JUnit
+  description: A programmer-oriented testing framework for Java
+  website_url: http://junit.org/
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2020/874086.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: com.google.code.gson:gson
+  description: Gson JSON library
+  version: 2.10.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
 - name: commons-collections:commons-collections
   description: Types that extend and augment the Java Collections Framework
   version: 3.2.2
@@ -63,23 +89,101 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
-  detection_source: build.gradle
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/gradle/build.gradle
+  detection_source: gradle/build.gradle
   last_updated_by: Swetank Mohanty
-  last_updated_on: 2024-02-29 15:29:10.000000000 Z
-- name: org.apache.commons:commons-lang3
-  description: Apache Commons Lang
-  version: '3.5'
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: commons-lang:commons-lang
+  description: Commons Lang
+  version: '2.6'
   license: Apache-2.0
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
-  detection_source: build.gradle
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
   last_updated_by: Swetank Mohanty
-  last_updated_on: 2024-02-29 15:29:10.000000000 Z
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.apache.commons:commons-lang3
+  description: Apache Commons Lang
+  version: 3.14.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.assertj:assertj-core
+  description: Rich and fluent assertions for testing for Java
+  version: 3.25.3
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.junit.jupiter:junit-jupiter
+  description: Module "junit-jupiter" of JUnit 5
+  version: 5.10.0
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/gradle/build.gradle
+  detection_source: gradle/build.gradle
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.junit.jupiter:junit-jupiter-api
+  description: Module "junit-jupiter-api" of JUnit 5
+  version: 5.10.2
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.junit.jupiter:junit-jupiter-engine
+  description: Module "junit-jupiter-engine" of JUnit 5
+  version: 5.10.2
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.junit.jupiter:junit-jupiter-params
+  description: Module "junit-jupiter-params" of JUnit 5
+  version: 5.10.2
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
 - name: org.junit.platform:junit-platform-launcher
   description: Module "junit-platform-launcher" of JUnit 5
   version: 1.10.0
@@ -89,7 +193,33 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/build.gradle
-  detection_source: build.gradle
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/gradle/build.gradle
+  detection_source: gradle/build.gradle
   last_updated_by: Swetank Mohanty
-  last_updated_on: 2024-02-29 15:29:10.000000000 Z
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.junit.platform:junit-platform-runner
+  description: Module "junit-platform-runner" of JUnit 5
+  version: 1.10.2
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z
+- name: org.projectlombok:lombok
+  description: 'Spice up your java: Automatic Resource Management'
+  version: 1.18.32
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/shortthirdman/LeetCode-Challenges/blob/main/maven/pom.xml
+  detection_source: maven/pom.xml
+  last_updated_by: Swetank Mohanty
+  last_updated_on: 2024-05-17 18:00:15.000000000 Z

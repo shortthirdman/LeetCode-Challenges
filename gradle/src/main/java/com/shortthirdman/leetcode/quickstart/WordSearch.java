@@ -9,12 +9,12 @@ public class WordSearch {
 
     Set<String> result = new HashSet<>();
 
-    static class TrieNode {
+    private static class TrieNode {
         public TrieNode[] children = new TrieNode[26];
         public String item = "";
     }
 
-    static class Trie {
+    private static class Trie {
         public TrieNode root = new TrieNode();
 
         public void insert(String word) {
@@ -31,15 +31,12 @@ public class WordSearch {
         public boolean search(String word) {
             TrieNode node = root;
             for (char c : word.toCharArray()) {
-                if (node.children[c - 'a'] == null)
+                if (node.children[c - 'a'] == null) {
                     return false;
+                }
                 node = node.children[c - 'a'];
             }
-            if (node.item.equals(word)) {
-                return true;
-            } else {
-                return false;
-            }
+            return node.item.equals(word);
         }
 
         public boolean startsWith(String prefix) {
@@ -74,7 +71,7 @@ public class WordSearch {
         return new ArrayList<>(result);
     }
 
-    public void dfs(char[][] board, boolean[][] visited, String str, int i, int j, Trie trie){
+    private void dfs(char[][] board, boolean[][] visited, String str, int i, int j, Trie trie){
         int m = board.length;
         int n = board[0].length;
 
