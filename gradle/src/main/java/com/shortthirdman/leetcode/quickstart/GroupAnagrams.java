@@ -1,10 +1,6 @@
 package com.shortthirdman.leetcode.quickstart;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author shortthirdman
@@ -22,7 +18,11 @@ public class GroupAnagrams {
      */
     public List<List<String>> categorizeBySorting(String[] contentArr) {
 
-        if (contentArr == null || contentArr.length == 0) {
+        if (contentArr == null) {
+            throw new NullPointerException("Array input can not empty or null");
+        }
+
+        if (contentArr.length == 0) {
             return new ArrayList<>();
         }
 
@@ -51,14 +51,22 @@ public class GroupAnagrams {
      * Time Complexity: O(n * k)O(n∗k) (k is the length of the largest string)<br/>
      * Space Complexity: O(n)O(n)<br/>
      *
-     * @param contentArr
+     * @param contentArr the array content
      * @return
      */
     public List<List<String>> categorizeByFrequency(String[] contentArr) {
+//        if (contentArr == null) {
+//            throw new NullPointerException("Input array is null");
+//        }
 
         // Check for empty inputs
         if (contentArr == null || contentArr.length == 0) {
             return new ArrayList<>();
+        }
+
+        boolean containsNull = Arrays.stream(contentArr).anyMatch(Objects::isNull);
+        if (containsNull) {
+            throw new IllegalArgumentException("Array contains null values");
         }
 
         Map<String, List<String>> frequencyStringsMap = new HashMap<>();
