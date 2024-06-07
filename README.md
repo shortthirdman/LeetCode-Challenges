@@ -18,10 +18,12 @@ All Java solutions for various challenges presented during interview on [LeetCod
 
 `mvn clean install test`
 
+```
+./gradlew wrapper --gradle-version=8.8 --distribution-type=bin
+```
+
 `gradle clean build`
 
-
-## Tech Stack
 
 ## Tech Stack
 shortthirdman/LeetCode-Challenges is built on the following main stack:
@@ -31,9 +33,10 @@ shortthirdman/LeetCode-Challenges is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/975/gradlephant-social-black-bg.png' alt='Gradle'/> [Gradle](https://www.gradle.org/) – Java Build Tools
 - <img width='25' height='25' src='https://img.stackshare.io/service/2020/874086.png' alt='JUnit'/> [JUnit](http://junit.org/) – Testing Frameworks
 
-Full tech stack [here](/techstack.md)
 
-Tech Stack File
+> Tech Stack File
+
+Full tech stack [here](/techstack.md)
 
 
 ## Contributing
